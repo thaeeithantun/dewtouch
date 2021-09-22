@@ -21,7 +21,7 @@
 		);?>
 
 <?php echo $this->Form->input('type', array('legend'=>false, 'type' => 'radio', 'options'=>$options_new,'before'=>'<label class="radio line notcheck">','after'=>'</label>' ,'separator'=>'</label><label class="radio line notcheck">'));?>
-
+<?php echo $this->Form->submit('Save', array('class' => 'btn btn-primary')); ?>
 
 <?php echo $this->Form->end();?>
 
@@ -58,8 +58,19 @@ $(document).ready(function(){
 		dialogClass: 'ui-dialog-blue'
 	});
 
+	$(".showDialog").hover(function(){ 
+		
+		var id = $(this).data('id'); 
+		console.log(id)
+		var content = $('#'+id).text();
+		console.log(content)
+		$(this).css('cursor','pointer').attr('title', content);
+		// $("#"+id).dialog('open'); 
+	});
+
 	
-	$(".showDialog").click(function(){ var id = $(this).data('id'); $("#"+id).dialog('open'); });
+
+	// $(".showDialog").hover(function(){ var id = $(this).data('id'); $("#"+id).dialog('open'); });
 
 })
 
