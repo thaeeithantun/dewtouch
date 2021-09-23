@@ -4,7 +4,7 @@
 			<?php echo __($title)?>
 		</div>
 	</div>
-	<?php print_r($orders); ?>
+
 	<div class="portlet-body">
 		<div class="row-fluid view_info">
 			<div class="span12 ">

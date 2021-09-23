@@ -1,6 +1,6 @@
 <?php
 	class PortionDetail extends AppModel{
 		
-		var $belongsTo = array('Portion','Part');
+		var $belongsTo = array('Part');
 
 	}
