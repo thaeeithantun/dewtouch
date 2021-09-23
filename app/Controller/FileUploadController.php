@@ -23,6 +23,7 @@ class FileUploadController extends AppController {
 					]);
 				}
 				fclose($handle);
+				$this->setFlash('Successfully Uploaded!');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->setFlash('Please Upload CSV file!');
