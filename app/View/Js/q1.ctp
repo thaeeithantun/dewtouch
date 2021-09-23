@@ -32,7 +32,7 @@ The table you start with</div>
 </thead>
 	<tbody>
 		<tr>
-			<td></td>
+			<td>1</td>
 			<td style="width: 40%;" class="description" data-id="1"><div></div></td>
 			<td style="width: 20%;" class="quantity" data-id="1"><div></div></td>
 			<td style="width: 20%;" class="unitprice" data-id="1"><div></div></td>
@@ -91,7 +91,7 @@ $(document).ready(function(){
     
 	
 	$("#add_item_button").click(function(){
-		markup = '<tr> <td></td> <td style="width: 40%;" class="description" data-id="'+lineNo+'"><div></div></td> <td style="width: 20%;" class="quantity" data-id="'+lineNo+'"><div></div></td> <td style="width: 20%;" class="unitprice" data-id="'+lineNo+'"><div></div></td> </tr>';
+		markup = '<tr> <td>'+lineNo+'</td> <td style="width: 40%;" class="description" data-id="'+lineNo+'"><div></div></td> <td style="width: 20%;" class="quantity" data-id="'+lineNo+'"><div></div></td> <td style="width: 20%;" class="unitprice" data-id="'+lineNo+'"><div></div></td> </tr>';
 		tableBody = $("table tbody");
 		tableBody.append(markup);
 		lineNo++;

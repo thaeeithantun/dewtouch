@@ -3,17 +3,24 @@
 		
 		public function index(){
 			ini_set('memory_limit','256M');
-			set_time_limit(0);
+			set_time_limit(20);
 			
 			$this->setFlash('Listing Record page too slow, try to optimize it.');
 			
-			
+			$start_time = microtime(true);
 			$records = $this->Record->find('all');
+			// End clock time in seconds
+			$end_time = microtime(true);
+			
+			// Calculate script execution time
+			$execution_time = ($end_time - $start_time);
+			// var_dump($execution_time); die;
 			
 			$this->set('records',$records);
 			
 			
 			$this->set('title',__('List Record'));
+			// var_dump(ini_get("memory_limit")); die;
 		}
 		
 		
