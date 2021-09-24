@@ -4,6 +4,7 @@
 			<?php echo __($title)?>
 		</div>
 	</div>
+
 	<div class="portlet-body">
 		<div class="row-fluid view_info">
 			<div class="span12 ">
