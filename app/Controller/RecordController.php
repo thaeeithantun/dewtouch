@@ -20,7 +20,6 @@
 			
 			
 			$this->set('title',__('List Record'));
-			// var_dump(ini_get("memory_limit")); die;
 		}
 		
 		
